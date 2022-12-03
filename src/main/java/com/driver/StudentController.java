@@ -42,7 +42,7 @@ public class StudentController {
     @GetMapping("/get-student-by-name/{name}")
     public ResponseEntity<Student> getStudentByName(@PathVariable String name){
         Student student = null; // Assign student by calling service layer method
-        studentService.getStudentName(name);
+        student=studentService.getStudentName(name);
         return new ResponseEntity<>(student, HttpStatus.CREATED);
     }
 
